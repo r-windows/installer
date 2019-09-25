@@ -17,6 +17,7 @@ OutputBaseFilename=rtools40-x86_64
 Compression=lzma/ultra
 SolidCompression=yes
 PrivilegesRequired=none
+PrivilegesRequiredOverridesAllowed=dialog
 ChangesEnvironment=yes
 UsePreviousAppDir=no
 DirExistsWarning=no
