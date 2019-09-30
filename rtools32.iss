@@ -17,6 +17,7 @@ OutputBaseFilename=rtools40-i686
 Compression=lzma/ultra
 SolidCompression=yes
 PrivilegesRequired=none
+PrivilegesRequiredOverridesAllowed=commandline
 ChangesEnvironment=yes
 UsePreviousAppDir=no
 DirExistsWarning=no
@@ -58,7 +59,7 @@ Root: HKCU; Subkey: "Software\R-core\Rtools\{code:SetupVer}"; Flags: uninsdelete
 Root: HKCU; Subkey: "Environment"; ValueType: expandsz; Flags: uninsdeletevalue; ValueName: RTOOLS40_HOME; ValueData: "{app}"; Check: NonAdmin
 
 [Files]
-Source: "build\rtools40\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs 
+Source: "build\rtools40\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Permissions: creatorowner-modify
 
 [Run]
 Filename: "{app}\autorebase.bat"; Description: "Rebase 32bit dll files (recommended)"; Flags: shellexec
